@@ -8,14 +8,14 @@
   [sides]
   (= (count sides) 3))
 
-(defn foo
+(defn sizes-equals
   [sizes]
-  (count (frequencies sizes)))
+  (apply max (vals (frequencies sizes))))
 
-(defmulti kind (fn [sides] (foo sides)))
-(defmethod kind 1 [sides] "equilateral")
+(defmulti kind (fn [sides] (sizes-equals sides)))
+(defmethod kind 3 [sides] "equilateral")
 (defmethod kind 2 [sides] "isosceles")
-(defmethod kind 3 [sides] "scalene")
+(defmethod kind 1 [sides] "scalene")
 
 (defn kind-triangle
   [sides]
