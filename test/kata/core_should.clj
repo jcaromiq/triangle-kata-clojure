@@ -10,7 +10,11 @@
     (king-triangle [1 2 3 4]) => (throws IllegalArgumentException))
 
   (fact
-    "Should throw exception given a non numbers as sides"
+    "Should throw exception given sides as not numerical"
     (king-triangle ["a" 2 3]) => (throws IllegalArgumentException))
+
+  (fact
+    "Should throw exception given sides with size lower or equals zero"
+    (king-triangle [0 2 3]) => (throws IllegalArgumentException))
   
 )
