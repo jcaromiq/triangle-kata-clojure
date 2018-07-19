@@ -17,6 +17,9 @@
     "Should throw exception given sides with size not positive"
     (kind-triangle [0 2 3]) => (throws IllegalArgumentException))
 
+  (fact
+    "Should return equilateral if sides are equals"
+    (kind-triangle [1 1 1]) => "equilateral")
 
-  
+
 )
