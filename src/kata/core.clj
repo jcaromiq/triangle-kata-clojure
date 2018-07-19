@@ -8,8 +8,8 @@
   [sides]
   (= (count sides) 3))
 
-(defn king-triangle
+(defn kind-triangle
   [sides]
   (let [s (filter validSize? sides)]
     (if (not (triangle? s)) (throw (IllegalArgumentException.)))
-    ""))
+    "equilateral"))
