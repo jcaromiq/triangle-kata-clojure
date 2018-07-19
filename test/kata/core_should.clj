@@ -29,5 +29,4 @@
     "Should return scalene if sides aren't equals"
     (kind-of-triangle [1 2 3]) => "scalene")
 
-
-)
+  )

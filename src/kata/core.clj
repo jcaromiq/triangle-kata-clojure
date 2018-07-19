@@ -1,12 +1,8 @@
 (ns kata.core)
 
-(defn valid-size?
-  [size]
-  (and (pos-int? size) (number? size )))
-
 (defn triangle?
   [sides]
-  (= (count (filter valid-size? sides)) 3))
+  (= (count (filter pos-int? sides)) 3))
 
 (defn sizes-equals
   [sizes]
