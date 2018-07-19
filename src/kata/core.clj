@@ -2,6 +2,6 @@
 
 (defn king-triangle
   [sides]
-  (if (not (= (count sides) 3)) (throw (Exception.)))
-
-  "")
+  (let [s (filter number? sides)]
+    (if (not (= (count s) 3)) (throw (IllegalArgumentException.)))
+    ""))
