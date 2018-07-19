@@ -25,5 +25,9 @@
     "Should return isosceles if only two sides are equals"
     (kind-triangle [1 1 2]) => "isosceles")
 
+  (fact
+    "Should return scalene if sides aren't equals"
+    (kind-triangle [1 2 3]) => "scalene")
+
 
 )

@@ -15,6 +15,7 @@
 (defmulti kind (fn [sides] (foo sides)))
 (defmethod kind 1 [sides] "equilateral")
 (defmethod kind 2 [sides] "isosceles")
+(defmethod kind 3 [sides] "scalene")
 
 (defn kind-triangle
   [sides]
