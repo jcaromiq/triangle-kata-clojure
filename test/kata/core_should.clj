@@ -14,7 +14,9 @@
     (king-triangle ["a" 2 3]) => (throws IllegalArgumentException))
 
   (fact
-    "Should throw exception given sides with size lower or equals zero"
+    "Should throw exception given sides with size not positive"
     (king-triangle [0 2 3]) => (throws IllegalArgumentException))
+
+
   
 )
