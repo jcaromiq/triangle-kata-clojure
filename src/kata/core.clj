@@ -1,12 +1,12 @@
 (ns kata.core)
 
-(defn validSize?
+(defn valid-size?
   [size]
   (and (pos-int? size) (number? size )))
 
 (defn triangle?
   [sides]
-  (= (count sides) 3))
+  (= (count (filter valid-size? sides)) 3))
 
 (defn sizes-equals
   [sizes]
@@ -15,12 +15,10 @@
 (defmulti kind (fn [sides] (sizes-equals sides)))
 (defmethod kind 3 [sides] "equilateral")
 (defmethod kind 2 [sides] "isosceles")
-(defmethod kind 1 [sides] "scalene")
+(defmethod kind :default [sides] "scalene")
 
-(defn kind-triangle
+(defn kind-of-triangle
   [sides]
-  (let [s (filter validSize? sides)]
-    (if (not (triangle? s)) (throw (IllegalArgumentException.)))
-    (kind s)))
-
-
+  (if (triangle? sides)
+    (kind sides)
+    (throw (IllegalArgumentException.))))
