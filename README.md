@@ -1,25 +1,13 @@
-# clojure-kata-archetype
+# Triangle-kata
 
 ## Description
 
-Clojure kata archetype project with the necessary dependencies to start a kata 
+given three integers representing the length of the sides of a triangle, return:
 
-## How to use
+* if the triangle is equilateral
+* if the triangle is isosceles
+* if the triangle is scalene
 
-Clone this repo
+and throw an exception if the triangle is not well formed
 
-```sh
-git clone https://github.com/jcaromiq/clojure-kata-archetype.git kata-name
-```
 
-​	where kata-name is the name of kata
-
-Change the values of project.clj
-
-run with
-
-    lein repl
-```clojure
-(use 'midje.repl)
-(autotest)
-```
